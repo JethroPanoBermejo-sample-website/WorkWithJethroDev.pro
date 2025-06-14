@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Work with a professional Frontend Web Developer. I create effective, fast-loading websites that help businesses succeed online. Transform your web presence with expert development solutions.">
+    <meta name="keywords" content="hire web developer, frontend developer, professional web development, Iloilo web developer, Philippines web developer, business websites, custom web development, responsive design">
+    <meta name="author" content="Jethro Bermejo">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Work With JethroDev | Professional Frontend Web Developer">
+    <meta property="og:description" content="Looking for a professional web developer? Let's create a powerful website that drives results for your business.">
+    <meta property="og:image" content="img/Profile.jfif">
+    <meta property="og:url" content="https://workwithjethrodev.pro">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Work With JethroDev | Professional Web Development">
+    <meta name="twitter:description" content="Looking for a professional web developer? Let's create a powerful website that drives results for your business.">
+    <meta name="twitter:image" content="img/Profile.jfif">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://workwithjethrodev.pro">
+    
+    <title>Work With JethroDev | Professional Frontend Web Developer</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8fffe 0%, #e8f8f5 100%);
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: #228B22;
+            text-decoration: none;
+            font-weight: bold;
+            z-index: 1001;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #228B22;
+        }
+
+        /* Burger Menu */
+        .burger-menu {
+            display: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .burger-menu div {
+            width: 25px;
+            height: 3px;
+            background: #228B22;
+            margin: 5px;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        #nav-toggle {
+            display: none;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .burger-menu {
+                display: block;
+                position: relative;
+                z-index: 1002;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 0.5rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links li {
+                margin: 0.25rem 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                font-size: 1rem;
+                padding: 0.4rem;
+                display: block;
+                color: #228B22;
+            }
+
+            .nav-links a:hover {
+                background-color: rgba(34, 139, 34, 0.1);
+            }
+
+            #nav-toggle:checked ~ .nav-links {
+                display: flex;
+            }
+
+            #nav-toggle:checked ~ .burger-menu .line1 {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            #nav-toggle:checked ~ .burger-menu .line2 {
+                opacity: 0;
+            }
+
+            #nav-toggle:checked ~ .burger-menu .line3 {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(120deg, #e0f2e9 0%, #f0f7f4 100%);
+        }
+
+        /* Add decorative shapes */
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(140deg, #32CD32 0%, #228B22 100%);
+            border-radius: 50%;
+            top: -300px;
+            right: -200px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(45deg, #228B22 0%, #98FB98 100%);
+            border-radius: 24px;
+            bottom: -200px;
+            left: -100px;
+            transform: rotate(45deg);
+            opacity: 0.08;
+            z-index: 0;
+        }
+
+        /* Additional floating shapes */
+        .shape-1, .shape-2, .shape-3 {
+            position: absolute;
+            background: #228B22;
+            border-radius: 50%;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .shape-1 {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 15%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .shape-2 {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            right: 18%;
+            animation: float 12s ease-in-out infinite;
+        }
+
+        .shape-3 {
+            width: 70px;
+            height: 70px;
+            bottom: 15%;
+            left: 25%;
+            animation: float 10s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Update text colors for better visibility on light background */
+        .hero-text h1 {
+            color: #228B22;
+            text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            color: #2F4F4F;
+            text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            color: #333;
+            text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            color: white;
+            box-shadow: 0 4px 15px rgba(34, 139, 34, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 139, 34, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #228B22;
+            border: 2px solid #228B22;
+        }
+
+        .btn-secondary:hover {
+            background: #228B22;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-visual img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #228B22;
+            box-shadow: 0 20px 40px rgba(34, 139, 34, 0.3);
+            animation: float 6s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+        }
+
+        .growth-visual {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #32CD32, #228B22);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(34, 139, 34, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .growth-visual::before {
+            content: '🌱';
+            font-size: 5rem;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #228B22;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            background: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #228B22;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .profile-card {
+            background: linear-gradient(135deg, #f8fffe, #e8f8f5);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(34, 139, 34, 0.1);
+            border: 1px solid rgba(34, 139, 34, 0.1);
+        }
+
+        .profile-avatar {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #32CD32, #228B22);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: #228B22;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: rgba(34, 139, 34, 0.1);
+            border-radius: 8px;
+        }
+
+        .skill-item::before {
+            content: '✅';
+            font-size: 1rem;
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f8fffe 0%, #e8f8f5 100%);
+        }
+
+        .experience-timeline {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .experience-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(34, 139, 34, 0.1);
+            border-left: 5px solid #228B22;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 2rem;
+            width: 15px;
+            height: 15px;
+            background: #228B22;
+            border-radius: 50%;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #228B22;
+        }
+
+        .experience-duration {
+            background: rgba(34, 139, 34, 0.1);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #228B22;
+            font-weight: 500;
+        }
+
+        .experience-company {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-location {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-description {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .experience-description ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .experience-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-card {
+            margin-bottom: 2rem;
+        }
+
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, #32CD32, #228B22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #228B22;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: #228B22;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .project-link:hover {
+            border-bottom-color: #228B22;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            color: white;
+        }
+
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .social-connections {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .social-links a {
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #228B22;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            font-size: 1.8rem;
+            color: white;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a5a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(34, 139, 34, 0.3);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 139, 34, 0.4);
+        }
+
+        /* Add animation styles */
+        section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .experience-item {
+            transition: all 0.5s ease;
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(34, 139, 34, 0.2);
+        }
+
+        /* Navigation Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: #228B22;
+            text-decoration: none;
+            font-weight: bold;
+            z-index: 1001;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #228B22;
+        }
+
+        /* Burger Menu */
+        .burger-menu {
+            display: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .burger-menu div {
+            width: 25px;
+            height: 3px;
+            background-color: #228B22;
+            margin: 5px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        #nav-toggle {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .burger-menu {
+                display: block;
+                position: relative;
+                z-index: 1002;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 0.5rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links li {
+                margin: 0.25rem 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                font-size: 1rem;
+                padding: 0.4rem;
+                display: block;
+                color: #228B22;
+            }
+
+            .nav-links a:hover {
+                background-color: rgba(34, 139, 34, 0.1);
+            }
+
+            #nav-toggle:checked ~ .nav-links {
+                display: flex;
+            }
+
+            #nav-toggle:checked ~ .burger-menu .line1 {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            #nav-toggle:checked ~ .burger-menu .line2 {
+                opacity: 0;
+            }
+
+            #nav-toggle:checked ~ .burger-menu .line3 {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.8rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .experience-timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .growth-visual {
+                width: 200px;
+                height: 200px;
+            }
+
+            .growth-visual::before {
+                font-size: 3rem;
+            }
+        }
+
+        /* Navigation Background Overlay */
+        .nav-background {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-background {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s ease;
+                z-index: 1001;
+            }
+
+            #nav-toggle:checked ~ .nav-background {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+        /* reCAPTCHA Styling */
+        .g-recaptcha {
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .g-recaptcha {
+                transform: scale(0.9);
+                transform-origin: center;
+            }
+        }
+
+        /* Why Choose Me Section */
+        .why-choose-me {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f8fffe 0%, #e8f8f5 100%);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(34, 139, 34, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            color: #228B22;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .benefit-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Jethro Bermejo",
+        "jobTitle": "Frontend Web Developer",
+        "image": "img/Profile.jfif",
+        "description": "Frontend Web Developer specializing in creating effective, fast-loading websites for businesses",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Iloilo",
+            "addressRegion": "Western Visayas",
+            "addressCountry": "Philippines"
+        },
+        "url": "https://jethropanobermejo-sample-website.github.io/portfolio/",
+        "sameAs": [
+            "https://github.com/jethropanobermejo-sample-website"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">Jethro Bermejo</a>            <input type="checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </label>            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="social-links">
+                    <a href="https://www.linkedin.com/in/jethro-bermejo-a5729a31b/" target="_blank" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/JethroPanoBermejo-sample-website" target="_blank" title="GitHub Profile"><i class="fab fa-github"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="shape-1"></div>
+        <div class="shape-2"></div>
+        <div class="shape-3"></div>
+        <div class="hero-content">            <div class="hero-text">
+                <h1>🚀 Transform Your Business With a Powerful Website</h1>
+                <p class="hero-subtitle">No More Complex Tech. Just Results.</p>
+                <p class="hero-description">
+                    Tired of complicated website solutions? I build clear, effective websites that actually work for your business. Whether you need to attract clients, showcase your work, or sell your services - I'll help you succeed online without the technical headaches.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Solve Your Website Needs</a>
+                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="img/Profile.jfif" alt="Jethro Bermejo - Frontend Web Developer from Iloilo, Philippines" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="profile-card">
+                        <img src="img/Profile.jfif" alt="Jethro Bermejo" class="profile-image" style="width: 200px; height: 200px; margin-bottom: 1.5rem;">
+                        <h3>Jethro Bermejo</h3>
+                        <p style="font-size: 1.2rem; color: #228B22; margin: 0.5rem 0;">Frontend Web Developer</p>
+                        <p style="color: #666;">Iloilo, Western Visayas, Philippines</p>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#contact" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Let's Work Together</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Your Website Problems, Solved.</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        Hi, I'm <strong>Jethro Bermejo</strong> — I specialize in turning your website frustrations into solutions that work for your business. With a keen eye for design and a deep understanding of user experience, I create websites that not only look great but also drive results.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin: 1.5rem 0;">
+                        I understand the challenges you're facing: slow websites that drive customers away, designs that don't convert visitors into clients, and the headache of managing technical details. That's why I focus on building websites that actually solve these problems.
+                    </p>
+                    <div style="background: rgba(34, 139, 34, 0.05); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+                        <h4 style="color: #228B22; margin-bottom: 1.5rem; font-size: 1.4rem;">🎯 How I Solve Your Website Needs:</h4>
+                        <div class="skills-list" style="grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+                            <div class="skill-item" style="font-size: 1.1rem;">Fast-loading websites that keep visitors engaged</div>
+                            <div class="skill-item" style="font-size: 1.1rem;">Mobile-friendly designs that work on all devices</div>
+                            <div class="skill-item" style="font-size: 1.1rem;">Clear calls-to-action that convert visitors to clients</div>
+                            <div class="skill-item" style="font-size: 1.1rem;">Easy-to-update systems that save you time</div>
+                            <div class="skill-item" style="font-size: 1.1rem;">SEO-ready setup to help clients find you</div>
+                            <div class="skill-item" style="font-size: 1.1rem;">Ongoing support for peace of mind</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 1.2rem; line-height: 1.8; margin-top: 2rem; color: #228B22; font-weight: 500;">
+                        Ready to transform your online presence? Let's create a website that works as hard as you do.
+                    </p>
+                    <div style="margin-top: 2rem;">
+                        <a href="#projects" class="btn btn-secondary" style="margin-right: 1rem;">View My Work</a>
+                        <a href="#contact" class="btn btn-primary">Start Your Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item" style="transform: translateX(-20px); opacity: 0.95;">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title" style="font-size: 1.4rem;">Frontend Web Developer</div>
+                            <div class="experience-company" style="font-size: 1.2rem;">Freelance</div>
+                            <div class="experience-location">Iloilo, Western Visayas, Philippines • Remote</div>
+                        </div>
+                        <div class="experience-duration" style="font-size: 1.1rem;">Jan 2024 - Present • 1 yr 6 mos</div>
+                    </div>
+                    <div class="experience-description" style="font-size: 1.1rem;">
+                        Specializing in creating impactful websites that drive business growth:
+                        <ul style="margin-top: 1rem; list-style-type: none;">
+                            <li style="margin-bottom: 0.8rem;">✓ Built responsive, user-friendly websites with optimal loading speeds</li>
+                            <li style="margin-bottom: 0.8rem;">✓ Implemented SEO best practices for improved visibility</li>
+                            <li style="margin-bottom: 0.8rem;">✓ Created conversion-focused designs that generate leads</li>
+                            <li>✓ Developed custom solutions for unique business needs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item" style="transform: translateX(20px); opacity: 0.95;">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title" style="font-size: 1.4rem;">Customer Service Representative</div>
+                            <div class="experience-company" style="font-size: 1.2rem;">WNS Careers - Philippines</div>
+                            <div class="experience-location">Iloilo, Western Visayas, Philippines • On-site</div>
+                        </div>
+                        <div class="experience-duration" style="font-size: 1.1rem;">Feb 2021 - Present • 4 yrs 5 mos</div>
+                    </div>
+                    <div class="experience-description" style="font-size: 1.1rem;">
+                        Developed crucial skills that enhance my web development services:
+                        <ul style="margin-top: 1rem; list-style-type: none;">
+                            <li style="margin-bottom: 0.8rem;">✓ Strong client communication and problem-solving abilities</li>
+                            <li style="margin-bottom: 0.8rem;">✓ Deep understanding of customer needs and expectations</li>
+                            <li style="margin-bottom: 0.8rem;">✓ Experience in managing and prioritizing multiple projects</li>
+                            <li>✓ Ability to explain complex concepts in simple terms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="why-choose-me">
+        <div class="container">
+            <h2 class="section-title">Why Work With Me?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Results-Focused Approach</h3>
+                    <p>I don't just build websites - I create solutions that drive real business results. Your success is my priority.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Fast & Efficient</h3>
+                    <p>Quick turnaround times and optimized performance ensure your website works as hard as you do.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Clear Communication</h3>
+                    <p>No tech jargon - just clear, honest communication and regular updates throughout your project.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💡</div>
+                    <h3>Problem Solver</h3>
+                    <p>I dig deep to understand your challenges and create custom solutions that address your specific needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Solutions I've Delivered</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🎯</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Lead Generation Solution</h3>
+                        <p class="project-description">
+                            Problem: Business struggling to capture qualified leads online.<br>
+                            Solution: Built a strategic website with optimized lead capture forms and clear value propositions that drive conversions.
+                        </p>
+                        <a href="https://jethropanobermejo-sample-website.github.io/johnsmithb2bleads/" class="project-link" target="_blank">See the Solution →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">👨‍💼</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Coach's Online Presence</h3>
+                        <p class="project-description">
+                            Problem: Coach needed to establish credibility and attract clients online.<br>
+                            Solution: Created a professional platform that showcases expertise and makes booking sessions simple.
+                        </p>
+                        <a href="https://jethropanobermejo-sample-website.github.io/businesscoach-johnsmith/" class="project-link" target="_blank">See the Solution →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">✍️</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Service Showcase Platform</h3>
+                        <p class="project-description">
+                            Problem: Copywriter struggling to demonstrate value to potential clients.<br>
+                            Solution: Developed a persuasive website that highlights expertise and makes it easy for clients to see the value.
+                        </p>
+                        <a href="https://jethropanobermejo-sample-website.github.io/johnsmith-copywriter/" class="project-link" target="_blank">See the Solution →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">📱</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Social Media Business Hub</h3>
+                        <p class="project-description">
+                            Problem: Agency needed to showcase social media management expertise.<br>
+                            Solution: Built an engaging platform that demonstrates results and makes service packages clear.
+                        </p>
+                        <a href="https://jethropanobermejo-sample-website.github.io/SMB-Social-Media-Mngt/" class="project-link" target="_blank">See the Solution →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Let's Grow Your Business Together</h2>
+                <p>Ready to turn your ideas into a beautiful online reality? Let's chat about your project and create something amazing!</p>
+                
+                <div class="social-connections">
+                    <p>Connect with me on:</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/jethro-bermejo-a5729a31b/" target="_blank" class="social-icon" title="Connect on LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/JethroPanoBermejo-sample-website" target="_blank" class="social-icon" title="Follow on GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xovwwjey" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Business/Project Type</label>
+                            <input type="text" id="business" name="business" placeholder="e.g., Coaching, Startup, E-commerce">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell me about your project</label>
+                            <textarea id="message" name="message" placeholder="What's your vision? What challenges are you facing? How can I help you grow online?" required></textarea>
+                        </div>
+                        <div class="g-recaptcha"></div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Start My Project 🚀</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Jethro Bermejo. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Show/hide back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Reveal sections on scroll
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
