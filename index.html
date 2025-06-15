@@ -448,23 +448,34 @@
 
         .skills-list {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
         .skill-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem;
+            gap: 1rem;
+            padding: 1rem;
             background: rgba(34, 139, 34, 0.1);
-            border-radius: 8px;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .skill-item::before {
-            content: '✅';
-            font-size: 1rem;
+        .skill-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(34, 139, 34, 0.15);
+        }
+
+        .skill-item i {
+            font-size: 1.5rem;
+            color: #228B22;
+        }
+
+        .skill-item span {
+            font-weight: 500;
+            color: #333;
         }
 
         /* Experience Section */
@@ -1198,7 +1209,7 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <h3>Your Website Problems, Solved.</h3>
+                    <h3>About Me</h3>
                     <p style="font-size: 1.1rem; line-height: 1.8;">
                         Hi, I'm <strong>Jethro Bermejo</strong> — I specialize in turning your website frustrations into solutions that work for your business. With a keen eye for design and a deep understanding of user experience, I create websites that not only look great but also drive results.
                     </p>
@@ -1246,6 +1257,26 @@
                     <div style="margin-top: 2rem;">
                         <a href="#projects" class="btn btn-secondary" style="margin-right: 1rem;">View My Work</a>
                         <a href="#contact" class="btn btn-primary">Start Your Project</a>
+                    </div>
+
+                    <h4 style="color: #228B22; margin-top: 2rem; margin-bottom: 1rem;">Technologies I Work With</h4>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-bootstrap"></i>
+                            <span>Bootstrap</span>
+                        </div>
                     </div>
                 </div>
             </div>
