@@ -26,6 +26,27 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://workwithjethrodev.pro">
     
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jethro Bermejo",
+      "url": "https://workwithjethrodev.pro",
+      "jobTitle": "Frontend Web Developer",
+      "image": "img/Profile.jfif",
+      "description": "Professional Frontend Web Developer specializing in creating effective, fast-loading websites that help businesses succeed online.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Iloilo",
+        "addressCountry": "Philippines"
+      }
+    }
+    </script>
+    
     <title>Work With JethroDev | Professional Frontend Web Developer</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
@@ -173,7 +194,7 @@
             background: linear-gradient(120deg, #e0f2e9 0%, #f0f7f4 100%);
         }
 
-        /* Add decorative shapes */
+        /* decorative shapes */
         .hero::before {
             content: '';
             position: absolute;
@@ -201,7 +222,7 @@
             z-index: 0;
         }
 
-        /* Additional floating shapes */
+        /* floating shapes */
         .shape-1, .shape-2, .shape-3 {
             position: absolute;
             background: #228B22;
@@ -250,7 +271,7 @@
             z-index: 1;
         }
 
-        /* Update text colors for better visibility on light background */
+        
         .hero-text h1 {
             color: #228B22;
             text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
@@ -601,16 +622,31 @@
 
         .project-card {
             margin-bottom: 2rem;
+            padding: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            background: #fff;
         }
 
         .project-image {
             height: 200px;
-            background: linear-gradient(135deg, #32CD32, #228B22);
+            background: none;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
+            align-items: stretch;
+            justify-content: stretch;
+            padding: 0;
+            margin: 0;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0;
+            box-shadow: none;
+            display: block;
+            border-bottom: 3px solid #228B22;
         }
 
         .project-content {
@@ -1172,25 +1208,24 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="#home" class="logo">Jethro Bermejo</a>            <input type="checkbox" id="nav-toggle">
+            <a href="#home" class="logo">Jethro Bermejo</a>            
+            <input type="checkbox" id="nav-toggle">
             <label for="nav-toggle" class="burger-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
-            </label>            <ul class="nav-links">
+            </label>            
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li class="social-links">
-                    <a href="https://www.linkedin.com/in/jethro-bermejo-a5729a31b/" target="_blank" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/JethroPanoBermejo-sample-website" target="_blank" title="GitHub Profile"><i class="fab fa-github"></i></a>
-                </li>
             </ul>
         </nav>
     </header>
 
+    <main>
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="shape-1"></div>
@@ -1388,54 +1423,59 @@
             <p class="section-subtitle">Portfolio of Sample Projects</p>        <div class="project-type-note">
             <i class="fas fa-info-circle"></i> These showcase projects are built to demonstrate my web development expertise and creative problem-solving abilities. Each website is based on extensive research of real business needs, allowing me to explore and implement practical solutions while showcasing my technical capabilities.
         </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">🎯</div>
+            <div class="projects-grid">                
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/lead-generation.png" alt="Lead Generation Solution - Strategic website with optimized lead capture forms" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">Lead Generation Solution</h3>
                         <p class="project-description">
                             Problem: Business struggling to capture qualified leads online.<br>
                             Solution: Built a strategic website with optimized lead capture forms and clear value propositions that drive conversions.
                         </p>
-                        <a href="https://jethropanobermejo-sample-website.github.io/johnsmithb2bleads/" class="project-link" target="_blank">See the Solution →</a>
+                        <a href="https://jethropanobermejo-sample-website.github.io/johnsmithb2bleads/" class="project-link" target="_blank">View Lead Generation Solution Case Study →</a>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">👨‍💼</div>
+                </article>                
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/business-coach.png" alt="Business Coach Website - Professional platform for coaching services" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">Coach's Online Presence</h3>
                         <p class="project-description">
                             Problem: Coach needed to establish credibility and attract clients online.<br>
                             Solution: Created a professional platform that showcases expertise and makes booking sessions simple.
                         </p>
-                        <a href="https://jethropanobermejo-sample-website.github.io/businesscoach-johnsmith/" class="project-link" target="_blank">See the Solution →</a>
+                        <a href="https://jethropanobermejo-sample-website.github.io/businesscoach-johnsmith/" class="project-link" target="_blank">Explore Business Coach Website Project →</a>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">✍️</div>
+                </article>                
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/copy-writer.png" alt="Copywriter Service Showcase - Professional copywriting services platform" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">Service Showcase Platform</h3>
                         <p class="project-description">
                             Problem: Copywriter struggling to demonstrate value to potential clients.<br>
                             Solution: Developed a persuasive website that highlights expertise and makes it easy for clients to see the value.
                         </p>
-                        <a href="https://jethropanobermejo-sample-website.github.io/johnsmith-copywriter/" class="project-link" target="_blank">See the Solution →</a>
+                        <a href="https://jethropanobermejo-sample-website.github.io/johnsmith-copywriter/" class="project-link" target="_blank">View Copywriter Service Platform →</a>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">📱</div>
+                </article>                
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/social-management.png" alt="Social Media Management Hub - Comprehensive social media services platform" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">Social Media Business Hub</h3>
                         <p class="project-description">
                             Problem: Agency needed to showcase social media management expertise.<br>
                             Solution: Built an engaging platform that demonstrates results and makes service packages clear.
                         </p>
-                        <a href="https://jethropanobermejo-sample-website.github.io/SMB-Social-Media-Mngt/" class="project-link" target="_blank">See the Solution →</a>
+                        <a href="https://jethropanobermejo-sample-website.github.io/SMB-Social-Media-Mngt/" class="project-link" target="_blank">Explore Social Media Management Platform →</a>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -1482,8 +1522,8 @@
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </div>    </section>
+    </main>
 
     <!-- Back to Top Button -->
     <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
