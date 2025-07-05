@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/Jethro Bermejo.webp">
+    <link rel="icon" type="image/webp" href="img/Jethro-Bermejo.webp">
     
     <!-- Google Analytics 4 tag (gtag.js) -->
     <script>
@@ -27,12 +27,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Preload critical hero image -->
-    <link rel="preload" href="img/Jethro Bermejo.webp" as="image" type="image/webp">
-    <link rel="preload" href="img/Jethro Bermejo.webp" as="image">
+    <link rel="preload" href="img/Jethro-Bermejo.webp" as="image" type="image/webp" imagesrcset="img/Jethro-Bermejo.webp 300w" imagesizes="300px">
+    <link rel="preload" href="img/Jethro-Bermejo.png" as="image">
     
     <!-- Load Font Awesome asynchronously to prevent render blocking -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    
+    <!-- Font display optimization -->
+    <style>
+        /* Ensure font-display: swap for better loading performance */
+        .fa, .fas, .fab, .far, .fal, .fad {
+            font-display: swap;
+        }
+    </style>
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Work with a professional Frontend Web Developer. I create effective, fast-loading websites that help businesses succeed online. Transform your web presence with expert development solutions.">
@@ -42,14 +50,14 @@
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Work With JethroDev | Professional Frontend Web Developer">
     <meta property="og:description" content="Looking for a professional web developer? Let's create a powerful website that drives results for your business.">
-    <meta property="og:image" content="img/Jethro Bermejo.webp">
+    <meta property="og:image" content="img/Jethro-Bermejo.webp">
     <meta property="og:url" content="https://workwithjethrodev.pro">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Work With JethroDev | Professional Web Development">
     <meta name="twitter:description" content="Looking for a professional web developer? Let's create a powerful website that drives results for your business.">
-    <meta name="twitter:image" content="img/Jethro Bermejo.webp">
+    <meta name="twitter:image" content="img/Jethro-Bermejo.webp">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://workwithjethrodev.pro">
@@ -61,10 +69,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
     
+    <!-- Cache optimization -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta http-equiv="Expires" content="Thu, 31 Dec 2025 23:59:59 GMT">
+    
     <!-- DNS prefetch for external domains -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//formspree.io">
+    <link rel="dns-prefetch" href="//www.google.com"  >
+    <link rel="dns-prefetch" href="//www.gstatic.com">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -74,7 +89,7 @@
       "name": "Jethro Bermejo",
       "url": "https://workwithjethrodev.pro",
       "jobTitle": "Frontend Web Developer",
-      "image": "img/Jethro Bermejo.webp",
+      "image": "img/Jethro-Bermejo.webp",
       "description": "Professional Frontend Web Developer specializing in creating effective, fast-loading websites that help businesses succeed online.",
       "address": {
         "@type": "PostalAddress",
@@ -1385,7 +1400,7 @@
         "@type": "Person",
         "name": "Jethro Bermejo",
         "jobTitle": "Frontend Web Developer",
-        "image": "img/Jethro Bermejo.webp",
+        "image": "img/Jethro-Bermejo.webp",
         "description": "Frontend Web Developer specializing in creating effective, fast-loading websites for businesses",
         "address": {
             "@type": "PostalAddress",
@@ -1440,8 +1455,19 @@
             </div>
             <div class="hero-visual">
                 <picture>
-                    <source srcset="img/Jethro Bermejo.webp" type="image/webp">
-                    <img src="img/Jethro Bermejo.webp" alt="Jethro Bermejo - Frontend Web Developer from Iloilo, Philippines" width="300" height="300" loading="eager" fetchpriority="high">
+                    <source 
+                        srcset="img/Jethro-Bermejo.webp 300w, img/Jethro-Bermejo.webp 400w" 
+                        sizes="(max-width: 768px) 250px, 300px"
+                        type="image/webp">
+                    <img 
+                        src="img/Jethro-Bermejo.png" 
+                        srcset="img/Jethro-Bermejo.png 300w, img/Jethro-Bermejo.png 400w" 
+                        sizes="(max-width: 768px) 250px, 300px"
+                        alt="Jethro Bermejo - Frontend Web Developer from Iloilo, Philippines" 
+                        width="300" 
+                        height="300" 
+                        loading="eager" 
+                        fetchpriority="high">
                 </picture>
             </div>
         </div>
@@ -1455,8 +1481,20 @@
                 <div class="about-image">
                     <div class="profile-card">
                         <picture>
-                            <source srcset="img/Jethro Bermejo.webp" type="image/webp">
-                            <img src="img/Jethro Bermejo.webp" alt="Jethro Bermejo" class="profile-image" width="200" height="200" loading="lazy" style="width: 200px; height: 200px; margin-bottom: 1.5rem;">
+                            <source 
+                                srcset="img/Jethro-Bermejo.webp 200w, img/Jethro-Bermejo.webp 250w" 
+                                sizes="(max-width: 768px) 150px, 200px"
+                                type="image/webp">
+                            <img 
+                                src="img/Jethro-Bermejo.png" 
+                                srcset="img/Jethro-Bermejo.png 200w, img/Jethro-Bermejo.png 250w"
+                                sizes="(max-width: 768px) 150px, 200px"
+                                alt="Jethro Bermejo" 
+                                class="profile-image" 
+                                width="200" 
+                                height="200" 
+                                loading="lazy" 
+                                style="width: 200px; height: 200px; margin-bottom: 1.5rem;">
                         </picture>
                         <h3>Jethro Bermejo</h3>
                         <p style="font-size: 1.2rem; color: #228B22; margin: 0.5rem 0;">Frontend Web Developer</p>
