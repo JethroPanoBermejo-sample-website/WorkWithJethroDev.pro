@@ -6,15 +6,32 @@
     <link rel="icon" type="image/jpeg" href="img/Jethro Bermejo.png">
     
     <!-- Google Analytics 4 tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q5M73D91P"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-8Q5M73D91P');
+      
+      // Load GA script asynchronously after page load
+      window.addEventListener('load', function() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8Q5M73D91P';
+        document.head.appendChild(script);
+      });
     </script>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical hero image -->
+    <link rel="preload" href="img/Jethro Bermejo.png" as="image">
+    
+    <!-- Load Font Awesome asynchronously to prevent render blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Work with a professional Frontend Web Developer. I create effective, fast-loading websites that help businesses succeed online. Transform your web presence with expert development solutions.">
@@ -38,6 +55,15 @@
     
     <!-- Robots Meta Tag -->
     <meta name="robots" content="index, follow">
+    
+    <!-- Performance hints -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -67,10 +93,79 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #f8fffe 0%, #e8f8f5 100%);
+            font-display: swap;
+        }
+
+        /* Header & Navigation*/
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: #228B22;
+            text-decoration: none;
+            font-weight: bold;
+            z-index: 1001;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 2rem 2rem 2rem;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(120deg, #e0f2e9 0%, #f0f7f4 100%);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            color: #228B22;
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero-visual img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #228B22;
+            box-shadow: 0 20px 40px rgba(34,139,34,0.3);
         }
 
         /* Header & Navigation */
@@ -81,6 +176,7 @@
             z-index: 1000;
             padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
         }
 
         nav {
@@ -204,31 +300,29 @@
             background: linear-gradient(120deg, #e0f2e9 0%, #f0f7f4 100%);
         }
 
-        /* decorative shapes */
+        /* Decorative Shapes */
         .hero::before {
             content: '';
             position: absolute;
-            width: 600px;
-            height: 600px;
-            background: linear-gradient(140deg, #32CD32 0%, #228B22 100%);
+            width: 400px;
+            height: 400px;
+            background: rgba(34, 139, 34, 0.1);
             border-radius: 50%;
-            top: -300px;
-            right: -200px;
-            opacity: 0.1;
+            top: -200px;
+            right: -100px;
             z-index: 0;
         }
 
         .hero::after {
             content: '';
             position: absolute;
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(45deg, #228B22 0%, #98FB98 100%);
+            width: 300px;
+            height: 300px;
+            background: rgba(34, 139, 34, 0.08);
             border-radius: 24px;
-            bottom: -200px;
-            left: -100px;
+            bottom: -150px;
+            left: -75px;
             transform: rotate(45deg);
-            opacity: 0.08;
             z-index: 0;
         }
 
@@ -268,6 +362,15 @@
         @keyframes float {
             0%, 100% { transform: translateY(0) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
 
         .hero-content {
@@ -406,6 +509,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
+            scroll-margin-top: 80px;
         }
 
         .container {
@@ -512,65 +616,83 @@
         /* Experience Section */
         .experience {
             padding: 6rem 2rem;
-            background: linear-gradient(135deg, #f8fffe 0%, #e8f8f5 100%);
+            background: white;
+            scroll-margin-top: 80px;
         }
 
-        .experience-timeline {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
         }
 
-        .experience-item {
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: calc(50% + 2rem);
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: calc(50% + 2rem);
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            top: 2rem;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid #228B22;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .timeline-content {
             background: white;
             padding: 2rem;
             border-radius: 15px;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 20px rgba(34, 139, 34, 0.1);
-            border-left: 5px solid #228B22;
-            position: relative;
-        }
-
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: -10px;
-            top: 2rem;
-            width: 15px;
-            height: 15px;
-            background: #228B22;
-            border-radius: 50%;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .experience-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #228B22;
+            box-shadow: 0 10px 15px -3px rgba(34, 139, 34, 0.1);
+            border: 1px solid rgba(34, 139, 34, 0.05);
         }
 
         .experience-duration {
-            background: rgba(34, 139, 34, 0.1);
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
             font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .experience-title {
+            font-size: 1.5rem;
+            font-weight: bold;
             color: #228B22;
-            font-weight: 500;
+            margin-bottom: 0.5rem;
         }
 
         .experience-company {
             font-weight: 600;
-            color: #555;
+            color: #228B22;
             margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
         .experience-location {
@@ -582,21 +704,33 @@
         .experience-description {
             color: #555;
             line-height: 1.7;
+            margin-bottom: 1rem;
         }
 
         .experience-description ul {
             margin-top: 1rem;
-            padding-left: 1.5rem;
+            list-style: none;
+            padding-left: 0;
         }
 
         .experience-description li {
             margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .experience-description li i {
+            color: #228B22;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
         }
 
         /* Projects Section */
         .projects {
             padding: 6rem 2rem;
             background: white;
+            scroll-margin-top: 80px;
         }
 
         .section-subtitle {
@@ -694,6 +828,7 @@
             padding: 6rem 2rem;
             background: linear-gradient(135deg, #228B22, #32CD32);
             color: white;
+            scroll-margin-top: 80px;
         }
 
         .contact-content {
@@ -975,6 +1110,11 @@
                 display: none;
             }
 
+            .hero {
+                padding: 100px 1rem 2rem 1rem; 
+                min-height: 100vh;
+            }
+
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -1007,8 +1147,19 @@
                 gap: 0.5rem;
             }
 
-            .experience-timeline {
-                grid-template-columns: 1fr;
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 60px;
+                margin-right: 0;
+                text-align: left;
+            }
+
+            .timeline-marker {
+                left: 30px;
             }
 
             .projects-grid {
@@ -1027,8 +1178,13 @@
         }
 
         @media (max-width: 480px) {
+            .hero {
+                padding: 110px 1rem 2rem 1rem; 
+            }
+
             .hero-text h1 {
                 font-size: 2rem;
+                line-height: 1.3;
             }
 
             .hero-subtitle {
@@ -1258,7 +1414,7 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <img src="img/Jethro Bermejo.png" alt="Jethro Bermejo - Frontend Web Developer from Iloilo, Philippines" loading="lazy">
+                <img src="img/Jethro Bermejo.png" alt="Jethro Bermejo - Frontend Web Developer from Iloilo, Philippines" width="300" height="300" loading="eager" fetchpriority="high">
             </div>
         </div>
     </section>
@@ -1270,7 +1426,7 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="profile-card">
-                        <img src="img/Jethro Bermejo.png" alt="Jethro Bermejo" class="profile-image" style="width: 200px; height: 200px; margin-bottom: 1.5rem;">
+                        <img src="img/Jethro Bermejo.png" alt="Jethro Bermejo" class="profile-image" width="200" height="200" loading="lazy" style="width: 200px; height: 200px; margin-bottom: 1.5rem;">
                         <h3>Jethro Bermejo</h3>
                         <p style="font-size: 1.2rem; color: #228B22; margin: 0.5rem 0;">Frontend Web Developer</p>
                         <p style="color: #666;">Iloilo, Western Visayas, Philippines</p>
@@ -1358,44 +1514,41 @@
     <section id="experience" class="experience">
         <div class="container">
             <h2 class="section-title">Experience</h2>
-            <div class="experience-timeline">
-                <div class="experience-item" style="transform: translateX(-20px); opacity: 0.95;">
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title" style="font-size: 1.4rem;">Frontend Web Developer</div>
-                            <div class="experience-company" style="font-size: 1.2rem;">Freelance</div>
-                            <div class="experience-location">Iloilo, Western Visayas, Philippines • Remote</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="experience-duration">Jan 2024 - Present • 1 yr 6 mos</span>
+                        <h4 class="experience-title">Frontend Web Developer</h4>
+                        <h5 class="experience-company">Freelance</h5>
+                        <p class="experience-location">Iloilo, Western Visayas, Philippines • Remote</p>
+                        <div class="experience-description">
+                            <p>Specializing in creating impactful websites that drive business growth:</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i>Built responsive, user-friendly websites with optimal loading speeds</li>
+                                <li><i class="fas fa-check"></i>Implemented SEO best practices for improved visibility</li>
+                                <li><i class="fas fa-check"></i>Created conversion-focused designs that generate leads</li>
+                                <li><i class="fas fa-check"></i>Developed custom solutions for unique business needs</li>
+                            </ul>
                         </div>
-                        <div class="experience-duration" style="font-size: 1.1rem;">Jan 2024 - Present • 1 yr 6 mos</div>
-                    </div>
-                    <div class="experience-description" style="font-size: 1.1rem;">
-                        Specializing in creating impactful websites that drive business growth:
-                        <ul style="margin-top: 1rem; list-style-type: none;">
-                            <li style="margin-bottom: 0.8rem;">✓ Built responsive, user-friendly websites with optimal loading speeds</li>
-                            <li style="margin-bottom: 0.8rem;">✓ Implemented SEO best practices for improved visibility</li>
-                            <li style="margin-bottom: 0.8rem;">✓ Created conversion-focused designs that generate leads</li>
-                            <li>✓ Developed custom solutions for unique business needs</li>
-                        </ul>
                     </div>
                 </div>
-
-                <div class="experience-item" style="transform: translateX(20px); opacity: 0.95;">
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title" style="font-size: 1.4rem;">Customer Service Representative</div>
-                            <div class="experience-company" style="font-size: 1.2rem;">WNS Careers - Philippines</div>
-                            <div class="experience-location">Iloilo, Western Visayas, Philippines • On-site</div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="experience-duration">Feb 2021 - Present • 4 yrs 5 mos</span>
+                        <h4 class="experience-title">Customer Service Representative</h4>
+                        <h5 class="experience-company">WNS Careers - Philippines</h5>
+                        <p class="experience-location">Iloilo, Western Visayas, Philippines • On-site</p>
+                        <div class="experience-description">
+                            <p>Developed crucial skills that enhance my web development services:</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i>Strong client communication and problem-solving abilities</li>
+                                <li><i class="fas fa-check"></i>Deep understanding of customer needs and expectations</li>
+                                <li><i class="fas fa-check"></i>Experience in managing and prioritizing multiple projects</li>
+                                <li><i class="fas fa-check"></i>Ability to explain complex concepts in simple terms</li>
+                            </ul>
                         </div>
-                        <div class="experience-duration" style="font-size: 1.1rem;">Feb 2021 - Present • 4 yrs 5 mos</div>
-                    </div>
-                    <div class="experience-description" style="font-size: 1.1rem;">
-                        Developed crucial skills that enhance my web development services:
-                        <ul style="margin-top: 1rem; list-style-type: none;">
-                            <li style="margin-bottom: 0.8rem;">✓ Strong client communication and problem-solving abilities</li>
-                            <li style="margin-bottom: 0.8rem;">✓ Deep understanding of customer needs and expectations</li>
-                            <li style="margin-bottom: 0.8rem;">✓ Experience in managing and prioritizing multiple projects</li>
-                            <li>✓ Ability to explain complex concepts in simple terms</li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -1407,28 +1560,28 @@
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <img src="img/results-focused.png" alt="Results-Focused Approach" loading="lazy">
+                        <img src="img/results-focused.png" alt="Results-Focused Approach" width="140" height="100" loading="lazy">
                     </div>
                     <h3>Results-Focused Approach</h3>
                     <p>I don't just build websites - I create solutions that drive real business results. Your success is my priority.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <img src="img/fast-efficient.png" alt="Fast & Efficient" loading="lazy">
+                        <img src="img/fast-efficient.png" alt="Fast & Efficient" width="140" height="100" loading="lazy">
                     </div>
                     <h3>Fast & Efficient</h3>
                     <p>Quick turnaround times and optimized performance ensure your website works as hard as you do.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <img src="img/clear-communication.png" alt="Clear Communication" loading="lazy">
+                        <img src="img/clear-communication.png" alt="Clear Communication" width="140" height="100" loading="lazy">
                     </div>
                     <h3>Clear Communication</h3>
                     <p>No tech jargon - just clear, honest communication and regular updates throughout your project.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <img src="img/problem-solver.png" alt="Problem Solver" loading="lazy">
+                        <img src="img/problem-solver.png" alt="Problem Solver" width="140" height="100" loading="lazy">
                     </div>
                     <h3>Problem Solver</h3>
                     <p>I dig deep to understand your challenges and create custom solutions that address your specific needs.</p>
@@ -1447,7 +1600,7 @@
             <div class="projects-grid">                
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="img/lead-generation.png" alt="Lead Generation Solution - Strategic website with optimized lead capture forms" loading="lazy">
+                        <img src="img/lead-generation.png" alt="Lead Generation Solution - Strategic website with optimized lead capture forms" width="400" height="200" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Lead Generation Solution</h3>
@@ -1460,7 +1613,7 @@
                 </article>                
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="img/business-coach.png" alt="Business Coach Website - Professional platform for coaching services" loading="lazy">
+                        <img src="img/business-coach.png" alt="Business Coach Website - Professional platform for coaching services" width="400" height="200" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Coach's Online Presence</h3>
@@ -1473,7 +1626,7 @@
                 </article>                
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="img/copy-writer.png" alt="Copywriter Service Showcase - Professional copywriting services platform" loading="lazy">
+                        <img src="img/copy-writer.png" alt="Copywriter Service Showcase - Professional copywriting services platform" width="400" height="200" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Service Showcase Platform</h3>
@@ -1486,7 +1639,7 @@
                 </article>                
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="img/social-management.png" alt="Social Media Management Hub - Comprehensive social media services platform" loading="lazy">
+                        <img src="img/social-management.png" alt="Social Media Management Hub - Comprehensive social media services platform" width="400" height="200" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Social Media Business Hub</h3>
@@ -1591,6 +1744,32 @@
 
         sections.forEach(section => {
             observer.observe(section);
+        });
+
+        // Performance optimizations
+        // Defer non-critical images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const script = document.createElement('script');
+            script.src = 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver';
+            document.head.appendChild(script);
+        }
+
+        // Prefetch critical resources after page load
+        window.addEventListener('load', function() {
+            // Prefetch next likely page resources
+            const links = ['#about', '#experience', '#projects', '#contact'];
+            links.forEach(link => {
+                const prefetchLink = document.createElement('link');
+                prefetchLink.rel = 'prefetch';
+                prefetchLink.href = link;
+                document.head.appendChild(prefetchLink);
+            });
         });
     </script>
 </body>
