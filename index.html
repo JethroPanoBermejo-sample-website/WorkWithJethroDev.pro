@@ -43,20 +43,20 @@
     </style>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Work with a professional Frontend Web Developer. I create effective, fast-loading websites that help businesses succeed online. Transform your web presence with expert development solutions.">
-    <meta name="keywords" content="hire web developer, frontend developer, professional web development, Iloilo web developer, Philippines web developer, business websites, custom web development, responsive design">
+    <meta name="description" content="Work with a professional Freelance Frontend Web Developer. I create effective, fast-loading websites that help businesses succeed online. Transform your web presence with expert freelance development solutions.">
+    <meta name="keywords" content="freelance web developer, hire freelancer, frontend developer, freelance web development, professional web development, Iloilo freelancer, Philippines freelancer, freelance web designer, independent web developer, business websites, custom web development, responsive design, freelance website developer">
     <meta name="author" content="Jethro Bermejo">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Work With JethroDev | Professional Frontend Web Developer">
-    <meta property="og:description" content="Looking for a professional web developer? Let's create a powerful website that drives results for your business.">
+    <meta property="og:title" content="Work With JethroDev | Professional Freelance Frontend Web Developer">
+    <meta property="og:description" content="Looking for a professional freelance web developer? Let's create a powerful website that drives results for your business.">
     <meta property="og:image" content="img/Jethro-Bermejo.webp">
     <meta property="og:url" content="https://workwithjethrodev.pro">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Work With JethroDev | Professional Web Development">
-    <meta name="twitter:description" content="Looking for a professional web developer? Let's create a powerful website that drives results for your business.">
+    <meta name="twitter:title" content="Work With JethroDev | Professional Freelance Web Development">
+    <meta name="twitter:description" content="Looking for a professional freelance web developer? Let's create a powerful website that drives results for your business.">
     <meta name="twitter:image" content="img/Jethro-Bermejo.webp">
     
     <!-- Canonical URL -->
@@ -88,9 +88,13 @@
       "@type": "Person",
       "name": "Jethro Bermejo",
       "url": "https://workwithjethrodev.pro",
-      "jobTitle": "Frontend Web Developer",
+      "jobTitle": "Freelance Frontend Web Developer",
       "image": "img/Jethro-Bermejo.webp",
-      "description": "Professional Frontend Web Developer specializing in creating effective, fast-loading websites that help businesses succeed online.",
+      "description": "Professional Freelance Frontend Web Developer specializing in creating effective, fast-loading websites that help businesses succeed online.",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Iloilo",
@@ -99,7 +103,7 @@
     }
     </script>
     
-    <title>Work With JethroDev | Professional Frontend Web Developer</title>
+    <title>Work With JethroDev | Professional Freelance Frontend Web Developer</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
         * {
@@ -1359,17 +1363,41 @@
             }
         }
         
+        /* Mobile performance optimizations */
+        @media (max-width: 767px) {
+            .solutions-grid {
+                gap: 0.75rem;
+                margin: 1rem auto;
+            }
+            
+            .solution-item {
+                will-change: auto;
+            }
+        }
+        
         .solution-item {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 12px;
             padding: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
         }
         
         .solution-item:hover {
             transform: translateY(-3px);
+        }
+        
+        /* Disable expensive effects on mobile for better performance */
+        @media (max-width: 768px) {
+            .solution-item {
+                background: rgba(255, 255, 255, 0.95);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                transition: none;
+            }
+            
+            .solution-item:hover {
+                transform: none;
+            }
         }
         
         .solution-item h3 {
@@ -1442,7 +1470,8 @@
         <div class="shape-1"></div>
         <div class="shape-2"></div>
         <div class="shape-3"></div>
-        <div class="hero-content">            <div class="hero-text">
+        <div class="hero-content">            
+            <div class="hero-text">
                 <h1> Transform Your Business With a Powerful Website</h1>
                 <p class="hero-subtitle">No More Complex Tech. Just Results.</p>
                 <p class="hero-description">
